@@ -7,7 +7,7 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 
 export default function Header() {
     return (
-        <NavigationMenu className="pb-4 font-[family-name:var(--font-mouse)]">
+        <NavigationMenu className="pb-4 font-[family-name:var(--font-mouse)] container mx-auto flex justify-center">
             <NavigationMenuList className="flex items-center">
                 <NavigationMenuItem className="mr-4">
                     <Link href="/Home" className="flex items-center">
