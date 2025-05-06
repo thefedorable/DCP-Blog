@@ -1,11 +1,19 @@
 import Header from "@/components/main/header";
+import DisplayPost from "@/components/pages/DisplayPost";
+import { Post } from "@/lib/Post";
+import { TestData } from "./TestPost";
+import test from "node:test";
+import Footer from "@/components/main/footer";
 
 export default function Home() {
+  const testData: TestData = new TestData();
+  const testPost: Post = testData.getTestPost();
+
   return (
-    <div className="items-center justify-items-center bg-background">
+    <div className="bg-background">
       <Header />
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      </div>
+      <DisplayPost post={testPost}/>
+      <Footer />
     </div>
   );
 }
