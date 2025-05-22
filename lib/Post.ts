@@ -1,18 +1,24 @@
 export class Post {
+    private id : string    
     private title : string;
-    private date: Date;
-    private description: string;
-    private content: string;
-    private image: string;
-    private video: string;
+    private date : Date;
+    private description : string;
+    private content : string;
+    private image : string;
+    private video : string;
 
-    constructor(title: string, date: Date, description: string, content: string, image: string, video: string) {
+    constructor(id: string,title: string, date: Date, description: string, content: string, image: string, video: string) {
+        this.id = id;
         this.title = title;
         this.date = date;
         this.description = description
         this.content = content;
         this.image = image;
         this.video = video;
+    }
+
+    public getId(): string {
+        return this.id;
     }
 
     public getTitle(): string {
@@ -37,6 +43,10 @@ export class Post {
 
     public getVideo(): string {
         return this.video;
+    }
+
+    public setId(id: string): void {
+        this.id = id;
     }
 
     public setTitle(title: string): void {

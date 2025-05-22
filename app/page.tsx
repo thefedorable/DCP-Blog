@@ -2,7 +2,6 @@ import Header from "@/components/main/header";
 import DisplayPost from "@/components/pages/DisplayPost";
 import { Post } from "@/lib/Post";
 import { TestData } from "./TestPost";
-import test from "node:test";
 import Footer from "@/components/main/footer";
 
 export default function Home() {
